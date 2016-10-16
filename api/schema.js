@@ -18,6 +18,7 @@ const rootSchema = [`
 
   type Mutation {
     submitRepository (repoFullName: String!): Entry
+    submitComment (repoFullName: String!, commentContent: String!): Comment
   }
 
   schema {
