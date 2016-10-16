@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import { graphqlExpress } from 'graphql-server-express';
 
 import { Auth } from './auth';
 
@@ -20,6 +21,11 @@ app.get('/logout', (req, res) => {
   auth.logout();
   res.redirect('/');
 });
+
+// Set GraphQL endpoint
+app.use('/graphql', graphqlExpress({
+  // options
+}));
 
 app.listen(PORT, () => console.log(
   `API Server is now running on http://localhost:${PORT}`
