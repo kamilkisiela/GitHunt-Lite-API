@@ -1,0 +1,130 @@
+[
+  {
+    "name": "apollo-client",
+    "owner": "apollostack",
+    "description": ":rocket: A simple caching client for any GraphQL server and UI framework",
+    "url": "https://github.com/apollostack/apollo-client",
+    "stars": "1035",
+    "issues": "106"
+  },
+  {
+    "name": "apollo-server",
+    "owner": "apollostack",
+    "description": ":earth_africa: GraphQL server for Express, Connect, Hapi and Koa",
+    "url": "https://github.com/apollostack/apollo-server",
+    "stars": "331",
+    "issues": "20"
+  },
+  {
+    "name": "meteor",
+    "owner": "meteor",
+    "description": "Meteor, the JavaScript App Platform",
+    "url": "https://github.com/meteor/meteor",
+    "stars": "35566",
+    "issues": "1002"
+  },
+  {
+    "name": "bootstrap",
+    "owner": "twbs",
+    "description": "The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.",
+    "url": "https://github.com/twbs/bootstrap",
+    "stars": "102127",
+    "issues": "424"
+  },
+  {
+    "name": "d3",
+    "owner": "d3",
+    "description": "Bring data to life with SVG, Canvas and HTML. :bar_chart::chart_with_upwards_trend::tada:",
+    "url": "https://github.com/d3/d3",
+    "stars": "55718",
+    "issues": "188"
+  },
+  {
+    "name": "angular.js",
+    "owner": "angular",
+    "description": "HTML enhanced for web apps",
+    "url": "https://github.com/angular/angular.js",
+    "stars": "52654",
+    "issues": "682"
+  }, 
+  {
+    "name": "jquery",
+    "owner": "jquery",
+    "description": "jQuery JavaScript Library",
+    "url": "https://github.com/jquery/jquery",
+    "stars": "41771",
+    "issues": "54"
+  },
+  {
+    "name": "react",
+    "owner": "facebook",
+    "description": "A declarative, efficient, and flexible JavaScript library for building user interfaces.",
+    "url": "https://github.com/facebook/react",
+    "stars": "51451",
+    "issues": "619"
+  },
+  {
+    "name": "electron",
+    "owner": "electron",
+    "description": "Build cross platform desktop apps with JavaScript, HTML, and CSS",
+    "url": "https://github.com/electron/electron",
+    "stars": "36663",
+    "issues": "358"
+  },
+  {
+    "name": "docker",
+    "owner": "docker",
+    "description": "Docker - the open-source application container engine",
+    "url": "https://github.com/docker/docker",
+    "stars": "35768",
+    "issues": "1815"
+  },
+  {
+    "name": "angular-cli",
+    "owner": "angular",
+    "description": "CLI tool for Angular2",
+    "url": "https://github.com/angular/angular-cli",
+    "stars": "4384",
+    "issues": "217"
+  },
+  {
+    "name": "angular",
+    "owner": "angular",
+    "description": "",
+    "url": "https://github.com/angular/angular",
+    "stars": "17153",
+    "issues": "801"
+  },
+  {
+    "name": "node",
+    "owner": "nodejs",
+    "description": "Node.js JavaScript runtime :sparkles::turtle::rocket::sparkles:",
+    "url": "https://github.com/nodejs/node",
+    "stars": "27557",
+    "issues": "586"
+  },
+  {
+    "name": "atom",
+    "owner": "atom",
+    "description": "The hackable text editor",
+    "url": "https://github.com/atom/atom",
+    "stars": "31382",
+    "issues": "1759"
+  },
+  {
+    "name": "moment",
+    "owner": "moment",
+    "description": "Parse, validate, manipulate, and display dates in javascript.",
+    "url": "https://github.com/moment/moment",
+    "stars": "28156",
+    "issues": "161"
+  },
+  {
+    "name": "express",
+    "owner": "expressjs",
+    "description": "Fast, unopinionated, minimalist web framework for node.",
+    "url": "https://github.com/expressjs/express",
+    "stars": "27804",
+    "issues": "89"
+  }
+]
