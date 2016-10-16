@@ -2,6 +2,7 @@ import { merge } from 'lodash';
 import { makeExecutableSchema } from 'graphql-tools';
 
 import { schema as sqlSchema, resolvers as sqlResolvers } from './sql/schema';
+import { schema as ghSchema, resolvers as ghResolvers } from './github/schema';
 
 const rootSchema = [`
 
@@ -31,8 +32,8 @@ const rootResolvers = {
   }
 };
 
-const schema = [...rootSchema, ...sqlSchema]; // one-level array
-const resolvers = merge(rootResolvers, sqlResolvers); // merge resolvers
+const schema = [...rootSchema, ...sqlSchema, ...ghSchema]; // one-level array
+const resolvers = merge(rootResolvers, sqlResolvers, ghResolvers); // merge resolvers
 
 const executableSchema = makeExecutableSchema({
   typeDefs: schema,

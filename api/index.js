@@ -6,6 +6,7 @@ import schema from './schema';
 
 import { Auth } from './auth';
 import { Entries } from './sql/models';
+import { Repositories } from './github/models';
 
 const app = express();
 const PORT = 5300;
@@ -30,7 +31,8 @@ app.use('/graphql', graphqlExpress({
   schema,
   context: {
     auth,
-    Entries: new Entries()
+    Entries: new Entries(),
+    Repositories: new Repositories(),
   }
 }));
 
