@@ -13,3 +13,13 @@ const rootSchema = [`
   }
 
 `];
+
+const rootResolvers = {
+  Query: {
+    currentUser() {
+      return {
+        login: 'foo'
+      };
+    }
+  }
+};
