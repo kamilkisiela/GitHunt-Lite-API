@@ -5,6 +5,7 @@ import { graphqlExpress, graphiqlExpress } from 'graphql-server-express';
 import schema from './schema';
 
 import { Auth } from './auth';
+import { Entries } from './sql/models';
 
 const app = express();
 const PORT = 5300;
@@ -28,7 +29,8 @@ app.get('/logout', (req, res) => {
 app.use('/graphql', graphqlExpress({
   schema,
   context: {
-    auth
+    auth,
+    Entries: new Entries()
   }
 }));
 
