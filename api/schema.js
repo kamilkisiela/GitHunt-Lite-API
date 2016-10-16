@@ -4,4 +4,12 @@ const rootSchema = [`
     login: String!
   }
 
+  type Query {
+    currentUser: User
+  }
+
+  schema {
+    query: Query
+  }
+
 `];
