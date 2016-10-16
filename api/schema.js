@@ -43,6 +43,15 @@ const rootResolvers = {
       if (!context.auth.getUser()) {
         throw new Error('Must be logged in to submit a repository.');
       }
+
+      return Promise.resolve()
+        // check if repository exists
+        .then(() => {
+          return context.Repositories.getByFullName(args.repoFullName)
+            .catch(() => {
+              throw new Error(`Couldn't find repository named "${args.repoFullName}"`);
+            })
+        })
     },
   },
 };
