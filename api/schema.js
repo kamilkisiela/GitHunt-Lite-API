@@ -56,6 +56,8 @@ const rootResolvers = {
         .then(() => {
           return context.Entries.submitRepository(args.repoFullName, context.auth.getUser().login)
         })
+        // return this repository
+        .then(() => context.Entries.getByRepoFullName(args.repoFullName));
     },
   },
 };
