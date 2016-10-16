@@ -16,6 +16,10 @@ const rootSchema = [`
     entry (repoFullName: String!): Entry
   }
 
+  type Mutation {
+    submitRepository (repoFullName: String!): Entry
+  }
+
   schema {
     query: Query
   }
@@ -33,7 +37,12 @@ const rootResolvers = {
     entry(root, args, context) {
       return context.Entries.getByRepoFullName(args.repoFullName);
     },
-  }
+  },
+  Mutation: {
+    submitRepository(root, args, context) {
+      
+    },
+  },
 };
 
 const schema = [...rootSchema, ...sqlSchema, ...ghSchema]; // one-level array
