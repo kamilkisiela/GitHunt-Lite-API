@@ -52,6 +52,10 @@ const rootResolvers = {
               throw new Error(`Couldn't find repository named "${args.repoFullName}"`);
             })
         })
+        // submit a new repository
+        .then(() => {
+          return context.Entries.submitRepository(args.repoFullName, context.auth.getUser().login)
+        })
     },
   },
 };
