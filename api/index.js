@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import { graphqlExpress } from 'graphql-server-express';
+import { graphqlExpress, graphiqlExpress } from 'graphql-server-express';
 
 import { Auth } from './auth';
 
@@ -25,6 +25,11 @@ app.get('/logout', (req, res) => {
 // Set GraphQL endpoint
 app.use('/graphql', graphqlExpress({
   // options
+}));
+
+// Set GraphiQL
+app.use('/graphiql', graphiqlExpress({
+  endpointURL: '/graphql'
 }));
 
 app.listen(PORT, () => console.log(
