@@ -61,6 +61,11 @@ const rootResolvers = {
         // return this repository
         .then(() => context.Entries.getByRepoFullName(args.repoFullName));
     },
+    submitComment(root, args, context) {
+      if (!context.auth.getUser()) {
+        throw new Error('Must be logged in to submit a comment.');
+      }
+    },
   },
 };
 
