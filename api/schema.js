@@ -75,6 +75,8 @@ const rootResolvers = {
             args.commentContent
           );
         })
+        // based on id, return this comment from our Database
+        .then(([id]) => context.Comments.getCommentById(id));
     },
   },
 };
