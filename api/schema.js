@@ -22,6 +22,7 @@ const rootSchema = [`
 
   schema {
     query: Query
+    mutation: Mutation
   }
 
 `];
