@@ -18,10 +18,8 @@ const rootSchema = [`
 
 const rootResolvers = {
   Query: {
-    currentUser() {
-      return {
-        login: 'foo'
-      };
+    currentUser(root, args, context) {
+      return context.auth.getUser();
     }
   }
 };

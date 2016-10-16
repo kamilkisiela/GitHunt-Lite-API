@@ -26,7 +26,10 @@ app.get('/logout', (req, res) => {
 
 // Set GraphQL endpoint
 app.use('/graphql', graphqlExpress({
-  schema
+  schema,
+  context: {
+    auth
+  }
 }));
 
 // Set GraphiQL
