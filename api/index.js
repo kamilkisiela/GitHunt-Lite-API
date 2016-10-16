@@ -2,6 +2,8 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import { graphqlExpress, graphiqlExpress } from 'graphql-server-express';
 
+import schema from './schema';
+
 import { Auth } from './auth';
 
 const app = express();
@@ -24,7 +26,7 @@ app.get('/logout', (req, res) => {
 
 // Set GraphQL endpoint
 app.use('/graphql', graphqlExpress({
-  // options
+  schema
 }));
 
 // Set GraphiQL
