@@ -11,6 +11,14 @@ import { property } from 'lodash';
 
 export const schema = [`
 
+  type Comment {
+    id: Int!
+    createdAt: Float! # Actually a date
+    postedBy: String!
+    content: String!
+    repoName: String!
+  }
+
   type Entry {
     createdAt: Float! # Actually a date
     postedBy: String!
@@ -28,5 +36,9 @@ export const resolvers = {
     repository(root, _, context) {
       return context.Repositories.getByFullName(root.repository_name);
     },
+  },
+  Comment: {
+    createdAt: property('created_at'),
+    postedBy: property('posted_by'),
   }
 };
