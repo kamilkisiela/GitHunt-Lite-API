@@ -13,6 +13,7 @@ const rootSchema = [`
   type Query {
     currentUser: User
     feed: [Entry]
+    entry (repoFullName: String!): Entry
   }
 
   schema {
@@ -28,6 +29,9 @@ const rootResolvers = {
     },
     feed(root, args, context) {
       return context.Entries.getForFeed();
+    },
+    entry(root, args, context) {
+      return context.Entries.getByRepoFullName(args.repoFullName);
     },
   }
 };
