@@ -65,6 +65,16 @@ const rootResolvers = {
       if (!context.auth.getUser()) {
         throw new Error('Must be logged in to submit a comment.');
       }
+
+      return Promise.resolve()
+        // submit a comment
+        .then(() => {
+          return context.Comments.submitComment(
+            args.repoFullName, 
+            context.auth.getUser().login, 
+            args.commentContent
+          );
+        })
     },
   },
 };
