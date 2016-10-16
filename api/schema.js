@@ -40,7 +40,9 @@ const rootResolvers = {
   },
   Mutation: {
     submitRepository(root, args, context) {
-      
+      if (!context.auth.getUser()) {
+        throw new Error('Must be logged in to submit a repository.');
+      }
     },
   },
 };
