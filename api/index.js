@@ -5,7 +5,7 @@ import { graphqlExpress, graphiqlExpress } from 'graphql-server-express';
 import schema from './schema';
 
 import { Auth } from './auth';
-import { Entries } from './sql/models';
+import { Entries, Comments } from './sql/models';
 import { Repositories } from './github/models';
 
 const app = express();
@@ -32,6 +32,7 @@ app.use('/graphql', graphqlExpress({
   context: {
     auth,
     Entries: new Entries(),
+    Comments: new Comments(),
     Repositories: new Repositories(),
   }
 }));

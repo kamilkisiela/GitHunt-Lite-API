@@ -1,4 +1,4 @@
-import { property } from 'lodash';
+import { property, constant } from 'lodash';
 
 // how property function works:
 //    var objects = [
@@ -8,6 +8,9 @@ import { property } from 'lodash';
 //     
 //    _.map(objects, _.property('a.b'));
 //    // => [2, 1]
+//
+// how constant function works:
+//    it creates a function that returns a value
 
 export const schema = [`
 
@@ -24,6 +27,8 @@ export const schema = [`
     postedBy: String!
     id: Int!
     repository: Repository!
+    comments: [Comment]
+    commentsCount: Int!
   }
 
 `];
@@ -35,6 +40,12 @@ export const resolvers = {
     createdAt: property('created_at'), // the same
     repository(root, _, context) {
       return context.Repositories.getByFullName(root.repository_name);
+    },
+    comments(root, _, context) {
+      return context.Comments.getCommentsByRepoName(root.repository_name);
+    },
+    commentsCount(root, _, context) {
+      return context.Comments.getCommentsCount(root.repository_name) || constant(0);
     },
   },
   Comment: {
