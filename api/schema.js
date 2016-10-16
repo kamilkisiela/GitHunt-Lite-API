@@ -1,3 +1,5 @@
+import { makeExecutableSchema } from 'graphql-tools';
+
 const rootSchema = [`
 
   type User {
@@ -23,3 +25,13 @@ const rootResolvers = {
     }
   }
 };
+
+const schema = rootSchema;
+const resolvers = rootResolvers;
+
+const executableSchema = makeExecutableSchema({
+  typeDefs: schema,
+  resolvers,
+});
+
+export default executableSchema;
